@@ -12,15 +12,15 @@ apt install -y golang-go autojump zsh python3-pip
 
 # oh-my-zsh
 apt install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp ./.zshrc ~/.zshrc
+curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+sh install.sh --unattended
+cp .zshrc ~/.zshrc
 source ~/.zshrc
 
-## Amass
+# Amass
 go get github.com/OWASP/Amass
 cd $GOPATH/src/github.com/OWASP/Amass
 go install ./...
-
 
 # Tools
 mkdir -p ~/tools

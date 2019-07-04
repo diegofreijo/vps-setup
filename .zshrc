@@ -41,7 +41,6 @@ export LANG=en_US.UTF-
 
 
 # Aliases
-# alias ls='exa'
 alias l='ls -lh'
 alias ll='ls -lha'
 alias ..='cd ..'
@@ -51,3 +50,5 @@ alias gs='git status'
 alias gp='git add . && git commit && git push --all'
 
 export EDITOR='vi'
+
+export ZSH_TMUX_AUTOSTART='true'
