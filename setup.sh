@@ -1,7 +1,12 @@
 #!/bin/bash
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
+
+print(){
+	echo -e "\e[32m[+] $1"
+}
+
+if [ "$EUID" -ne 0 ]; then
+	print "Please run as root"
+	exit
 fi
 
 export DEBIAN_FRONTEND=noninteractive
@@ -33,5 +38,5 @@ cd ~/projects
 
 
 # Done
-echo 'Done! Rebooting...'
+print "Done! Rebooting..."
 reboot
