@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
+export ZSH_TMUX_AUTOSTART='true'
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -29,7 +30,7 @@ export PATH=$PATH:/snap/bin
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git tmux)
 
 # User configuration
 
@@ -53,5 +54,3 @@ alias gs='git status'
 alias gp='git add . && git commit && git push --all'
 
 export EDITOR='vi'
-
-export ZSH_TMUX_AUTOSTART='true'
