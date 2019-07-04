@@ -12,6 +12,9 @@ ZSH_THEME="alanpeabody"
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 
+# Snap
+export PATH=$PATH:/snap/bin
+
 # dotnet
 # export PATH=$PATH:$HOME/.dotnet/tools
 # export PATH=$PATH:$HOME/Projects/scripts
@@ -37,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-
+export LANG=en_US.UTF-8
 
 
 # Aliases

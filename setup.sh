@@ -14,7 +14,7 @@ print "VPS setup starting!"
 export DEBIAN_FRONTEND=noninteractive
 apt update
 apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" --force-yes
-apt install -y golang-go autojump zsh python3-pip
+apt install -y golang-go autojump zsh python3-pip snapd
 
 # oh-my-zsh
 curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
@@ -24,9 +24,7 @@ chsh -s $(which zsh)
 source ~/.zshrc
 
 # Amass
-go get github.com/OWASP/Amass
-cd $GOPATH/src/github.com/OWASP/Amass
-go install ./...
+snap install amass
 
 # Tools
 mkdir -p ~/tools
