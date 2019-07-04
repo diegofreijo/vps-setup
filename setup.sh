@@ -1,13 +1,15 @@
 #!/bin/bash
 
 print(){
-	echo -e "\e[32m[+] $1"
+	echo -e "\e[32m[+] $1\e[39m"
 }
 
 if [ "$EUID" -ne 0 ]; then
 	print "Please run as root"
 	exit
 fi
+
+print "VPS setup starting!"
 
 export DEBIAN_FRONTEND=noninteractive
 apt update
@@ -19,6 +21,7 @@ curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sh install.sh --unattended
 cp .zshrc ~/.zshrc
 chsh -s $(which zsh)
+source ~/.zshrc
 
 # Amass
 go get github.com/OWASP/Amass
