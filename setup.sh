@@ -1,7 +1,13 @@
 #!/bin/bash
-sudo su
+
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+export DEBIAN_FRONTEND=noninteractive
 apt update
-apt upgrade --yes --assume-yes
+apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" --force-yes
 apt install -y golang-go autojump zsh python3-pip
 
 # oh-my-zsh
