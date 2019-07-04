@@ -6,7 +6,7 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="alanpeabody"
 
 # AutoJump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+. /usr/share/autojump/autojump.sh
 
 # Go
 export GOPATH=~/go
