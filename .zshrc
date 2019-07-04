@@ -9,8 +9,8 @@ ZSH_THEME="alanpeabody"
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Go
-# export GOPATH=~/go
-# export PATH=$PATH:$GOPATH/bin
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
 
 # dotnet
 # export PATH=$PATH:$HOME/.dotnet/tools

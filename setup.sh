@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
@@ -11,11 +10,10 @@ apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-
 apt install -y golang-go autojump zsh python3-pip
 
 # oh-my-zsh
-apt install zsh
 curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 sh install.sh --unattended
 cp .zshrc ~/.zshrc
-source ~/.zshrc
+chsh -s $(which zsh)
 
 # Amass
 go get github.com/OWASP/Amass
@@ -32,3 +30,8 @@ git clone https://github.com/danielmiessler/SecLists.git
 # Projects
 mkdir -p ~/projects
 cd ~/projects
+
+
+# Done
+echo 'Done! Rebooting...'
+reboot
