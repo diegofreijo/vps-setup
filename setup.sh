@@ -14,7 +14,7 @@ print "VPS setup starting!"
 export DEBIAN_FRONTEND=noninteractive
 apt update
 apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" --force-yes
-apt install -y golang-go autojump zsh python-pip python3-pip snapd nmap masscan unzip
+apt install -y golang-go autojump zsh python-pip python3-pip snapd nmap masscan unzip sslscan nikto
 
 # oh-my-zsh
 curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
