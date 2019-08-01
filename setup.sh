@@ -33,6 +33,10 @@ cd ~/tools
 git clone https://github.com/j3ssie/Osmedeus && cd Osmedeus && ./install.sh
 git clone https://github.com/danielmiessler/SecLists.git
 
+go get -u github.com/tomnomnom/assetfinder
+go get -u github.com/tomnomnom/httprobe
+go get -u github.com/tomnomnom/meg
+
 
 # Projects
 mkdir -p ~/projects
