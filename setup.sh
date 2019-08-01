@@ -37,6 +37,7 @@ go get -u github.com/tomnomnom/assetfinder
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/meg
 go get -u github.com/tomnomnom/gf
+cp -r $GOPATH/src/github.com/tomnomnom/gf/examples ~/.gf
 
 
 # Projects
