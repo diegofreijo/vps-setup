@@ -36,6 +36,7 @@ git clone https://github.com/danielmiessler/SecLists.git
 go get -u github.com/tomnomnom/assetfinder
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/meg
+go get -u github.com/tomnomnom/gf
 
 
 # Projects
