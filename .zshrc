@@ -53,4 +53,7 @@ alias g='git add . && git commit'
 alias gs='git status'
 alias gp='git add . && git commit && git push --all'
 
+unalias gf
+source /root/go/src/github.com/tomnomnom/gf/gf-completion.zsh
+
 export EDITOR='vi'
